@@ -5,6 +5,6 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   server: {
-    host: '101.132.124.188'
+    host: '0.0.0.0'
   }
 })
