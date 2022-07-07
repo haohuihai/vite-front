@@ -17,7 +17,7 @@ export default {
   props: {},
   setup(props, context) {},
   mounted() {
-    axios.get("http://localhost:10000/api/users").then((response) => {
+    axios.get("http://localhost:10001/api/users").then((response) => {
       this.users = response.data;
     });
   },
