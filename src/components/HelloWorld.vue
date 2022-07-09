@@ -3,7 +3,7 @@
     <ul>
       <li v-for="item in users" :key="item.id">{{ item.name }}</li>
     </ul>
-    <div>welcom</div>
+    <div>welcwelcomwelcomom</div>
   </div>
 </template>
 <script>
