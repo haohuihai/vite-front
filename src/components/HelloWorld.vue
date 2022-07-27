@@ -3,7 +3,7 @@
     <ul>
       <li v-for="item in users" :key="item.id">{{ item.name }}</li>
     </ul>
-    <div>welcome my world</div>
+    <div>端口3000服务启动</div>
   </div>
 </template>
 <script>
