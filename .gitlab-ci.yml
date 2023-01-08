@@ -1,3 +1,4 @@
+image: node:latest
 variables:
   DIST_DIR: /home/www/wwwroot/vite-front
 before_script:
