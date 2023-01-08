@@ -1,0 +1,35 @@
+variables:
+  DIST_DIR: /home/www/wwwroot/vite-front
+  WEB-CONTAINER: vite-front
+before_script:
+  - mkdir -p ${DIST_DIR}
+stages:
+  - install
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules
+    - dist
+install-job:
+  only:
+    refs:
+      - master
+  stage: install
+  script: 
+    - npm 
+  
+build-job:
+  stage: build
+  script:
+    - npm run build
+
+deploy-job:
+  only:
+    refs:
+      - master
+    stage: deploy
+    script:
+      - rm -rf ${DIST_DIR}/*
+      - cp -rf dist/* ${DIST_DIR}/
