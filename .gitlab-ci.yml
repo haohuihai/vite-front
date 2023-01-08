@@ -29,7 +29,7 @@ deploy-job:
   only:
     refs:
       - master
-    stage: deploy
-    script:
-      - rm -rf ${DIST_DIR}/*
-      - cp -rf dist/* ${DIST_DIR}/
+  stage: deploy
+  script:
+    - rm -rf ${DIST_DIR}/*
+    - cp -rf dist/* ${DIST_DIR}/
