@@ -1,6 +1,5 @@
 variables:
   DIST_DIR: /home/www/wwwroot/vite-front
-  WEB-CONTAINER: vite-front
 before_script:
   - mkdir -p ${DIST_DIR}
 stages:
