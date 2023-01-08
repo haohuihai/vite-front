@@ -18,7 +18,7 @@ install-job:
       - master
   stage: install
   script: 
-    - npm 
+    - npm install
   
 build-job:
   stage: build
