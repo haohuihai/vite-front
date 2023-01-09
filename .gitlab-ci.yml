@@ -1,12 +1,12 @@
 variables:
   DIST_DIR: /home/www/wwwroot/vite-front
-  WEB-CONTAINER: vite-front
+  # WEB-CONTAINER: vite-front
 before_script:
   - mkdir -p ${DIST_DIR}
 stages:
   - install
   - build
-  - deploy
+  # - deploy
 
 cache:
   paths:
@@ -21,15 +21,18 @@ install-job:
     - npm install
   
 build-job:
+  only:
+    refs:
+      - master
   stage: build
   script:
     - npm run build
 
-deploy-job:
-  only:
-    refs:
-      - master
-  stage: deploy
-  script:
-    - rm -rf ${DIST_DIR}/*
-    - cp -rf dist/* ${DIST_DIR}/
+# deploy-job:
+#   only:
+#     refs:
+#       - master
+#   stage: deploy
+#   script:
+#     - rm -rf ${DIST_DIR}/*
+#     - cp -rf dist/* ${DIST_DIR}/
